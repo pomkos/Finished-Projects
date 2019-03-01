@@ -120,6 +120,9 @@ table(adult$type_employer)
 str(adult)
 ```
   
+  * Could have also created a list of countries (continent <- c(ctry,ctry,ctry)) and then check if the cell string is in the continent list.
+  * if x in continent, return 'continent.'
+  
 # Missing Data
 
 ```{r}
@@ -180,7 +183,7 @@ library(ggplot2)
 
 ```{r}
 pl <- ggplot(data=adult,aes(age))
-pl + geom_histogram(aes(fill=income),color='black')
+pl + geom_histogram(aes(fill=income),color='black',binwidth = 1)
 ```
 
 ## Histogram of hours worked/week
@@ -194,10 +197,12 @@ pl2 + geom_histogram(aes(fill=income))
 
 ```{r}
 adult$region <- adult$country
-adult <- subset(adult,select=-country) # remove the country column
+adult <- select(adult,-country) # remove the country column using dplyr
 pl3 <- ggplot(data=adult,aes(region))
 pl3 + geom_bar(aes(fill=income),color='black')
 ```
+
+* Can also use dplyr: adult <- rename(adult,region = country)
 
 # Build a Model
 
@@ -218,8 +223,13 @@ adult.logit <- glm(income~.,family=binomial(logit),data=ad.train)
 summary(adult.logit)
 ```
 
+* Warning message says that model predicts data either 0 or 100% chance occurring in one of two categories
+
 ## Refine the model
-?step 
+
+### ?step 
+
+Compares different logistic models. Tries a bunch of different combinations of variables in logistic regression model, keeps the ones that are significant. 
 
 * Uses akaike information criterion to remove predictors not relevant to the model
 * AIC estimates the relative amount of information lost by a given model: the less information a model loses, the higher the quality of that model. 
@@ -243,7 +253,9 @@ fitted.probabilities <- predict(new.model,newdata=ad.test, type='response')
 table(ad.test$income, fitted.probabilities > 0.5)
 ```
 
-** Cheated below this, looked up answers **
+* True Pos + True Neg / everything
+
+**Cheated below this, looked up answers**
 
 ### Check the performance of the model
 
@@ -269,3 +281,5 @@ table(ad.test$income, fitted.probabilities > 0.5)
 ```{r}  
   (6282)/(6282+903)
 ```
+
+Since we don't know what it will be used for, we can't say whether this is a good model or not.

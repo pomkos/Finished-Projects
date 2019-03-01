@@ -125,7 +125,7 @@ pl2 + geom_histogram(aes(fill=income))
 
 ## Rename country column
 adult$region <- adult$country
-adult <- subset(adult,select=-country) # remove the country column
+adult <- select(adult,-country) # remove the country column
 pl3 <- ggplot(data=adult,aes(region))
 pl3 + geom_bar(aes(fill=income),color='black')
 
