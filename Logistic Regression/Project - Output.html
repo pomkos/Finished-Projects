@@ -910,6 +910,10 @@ table(ad.test$income, fitted.probabilities &gt; 0.5)</code></pre>
 ##   &gt;50K    903 1349</code></pre>
 <ul>
 <li>True Pos + True Neg / everything</li>
+<li>Correctly predicted that 6282 observations had income &lt; 50k</li>
+<li>Incorrectly predicted that 514 observations had income &lt; 50k</li>
+<li>Correctly predicted that 1349 observations had income &gt; 50k</li>
+<li>Incorrectly predicted that 903 observations had income &gt; 50k</li>
 </ul>
 <p><strong>Cheated below this, looked up answers</strong></p>
 </div>
@@ -924,20 +928,38 @@ table(ad.test$income, fitted.probabilities &gt; 0.5)</code></pre>
 <pre class="r"><code>  # Answer: 
   (6282+1349)/(6282+902+514+1349)</code></pre>
 <pre><code>## [1] 0.843484</code></pre>
+<ul>
+<li>Randomly putting observations into the two categories would have given us 50% accuracy</li>
+<li>Our model gave us 84% accuracy.</li>
+<li>Our model correctly predicted the classification of people’s income based on various other variables 84% of the time.</li>
+</ul>
 </div>
 <div id="recall" class="section level4">
 <h4>Recall:</h4>
+<p>How many relevant items are selected?</p>
 <pre class="r"><code>  (6282)/(6282+514)</code></pre>
 <pre><code>## [1] 0.9243673</code></pre>
+<ul>
+<li>92% of the observations predicted as &lt;50k category should have been in the &lt;50k category.</li>
+<li>8% of the observations predicted as &lt;50k category should have been in the &gt;50k category.</li>
+</ul>
 </div>
 <div id="precision" class="section level4">
 <h4>Precision:</h4>
+<p>How many selected items are relevant?</p>
 <pre class="r"><code>  (6282)/(6282+903)</code></pre>
 <pre><code>## [1] 0.8743215</code></pre>
+<ul>
+<li>87% of the observations that should have been in the &lt;50k category were predicted as &lt;50k.</li>
+<li>13% of the observations that should have been in the &lt;50k category were predicted as &gt;50k.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="conclusion" class="section level1">
+<h1>Conclusion:</h1>
 <p>Since we don’t know what it will be used for, we can’t say whether this is a good model or not.</p>
-</div>
-</div>
-</div>
 </div>
 
 

@@ -254,6 +254,10 @@ table(ad.test$income, fitted.probabilities > 0.5)
 ```
 
 * True Pos + True Neg / everything
+* Correctly predicted that 6282 observations had income < 50k
+* Incorrectly predicted that 514 observations had income < 50k
+* Correctly predicted that 1349 observations had income > 50k
+* Incorrectly predicted that 903 observations had income > 50k
 
 **Cheated below this, looked up answers**
 
@@ -270,16 +274,32 @@ table(ad.test$income, fitted.probabilities > 0.5)
   (6282+1349)/(6282+902+514+1349)
 ```
 
+* Randomly putting observations into the two categories would have given us 50% accuracy
+* Our model gave us 84% accuracy.
+* Our model correctly predicted the classification of people's income based on various other variables 84% of the time.
+
 #### Recall:
+
+How many relevant items are selected?
 
 ```{r}  
   (6282)/(6282+514)
 ```
 
+* 92% of the observations predicted as <50k category should have been in the <50k category.
+* 8% of the observations predicted as <50k category should have been in the >50k category.
+
 #### Precision:
+
+How many selected items are relevant?
 
 ```{r}  
   (6282)/(6282+903)
 ```
+
+* 87% of the observations that should have been in the <50k category were predicted as <50k.
+* 13% of the observations that should have been in the <50k category were predicted as >50k.
+
+# Conclusion:
 
 Since we don't know what it will be used for, we can't say whether this is a good model or not.
