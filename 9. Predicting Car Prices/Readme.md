@@ -4,4 +4,4 @@ This is an expansion on the guided project I completed with [DataQuest](https://
 * Multivariate KNN analysis with holdout validation
 * Multivariate KNN analysis with manual k-fold validation
 * A merging of all three multivariate algorithms into one `knn_trainer` class
-* Comparison of all four algorithms' rmse
+* Comparison of all four algorithms' RMSE (root mean squared error)
