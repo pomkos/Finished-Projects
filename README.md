@@ -5,7 +5,7 @@
 
 # DataQuest Guided Projects
 
-## Basics
+## Python Basics
 
 1. [NYC High School](https://github.com/pomkos/Finished-Projects/tree/master/1.%20NYC%20High%20School)
 2. [Star Wars](https://github.com/pomkos/Finished-Projects/tree/master/2.%20Star%20Wars%20Survey)
