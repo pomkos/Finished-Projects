@@ -20,3 +20,8 @@
 
 ## Machine Learning
 1. [Predicting Car Prices](https://github.com/pomkos/Finished-Projects/tree/master/9.%20Predicting%20Car%20Prices)
+
+# Udemy Bootcamp Projects
+1. [Predicting Bike Use with R](https://github.com/pomkos/Finished-Projects/tree/master/R/Linear%20Regression)
+2. [Predicting Worker Class with R](https://github.com/pomkos/Finished-Projects/tree/master/R/Logistic%20Regression)
+3. [Predicting Ad Clicks with Python](https://github.com/pomkos/Finished-Projects/tree/master/Python/Logistic%20Regression)
