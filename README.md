@@ -19,9 +19,11 @@
 4. [Winning Jeopardy](https://github.com/pomkos/Finished-Projects/tree/master/8.%20Winning%20Jeopardy)
 
 ## Machine Learning
-1. [Predicting Car Prices](https://github.com/pomkos/Finished-Projects/tree/master/9.%20Predicting%20Car%20Prices)
+1. [Predicting Car Prices](https://github.com/pomkos/Finished-Projects/tree/master/9.%20Predicting%20Car%20Prices) #LinearRegression
+2. [Predicting House Sale Prices](https://github.com/pomkos/Finished-Projects/blob/master/10.%20Predicting%20House%20Sale%20Prices/Basics.ipynb) #LogisticRegression
+3. [Building a Hand Written Digit Classifier](https://github.com/pomkos/Finished-Projects/blob/master/13.%20Building%20A%20Handwritten%20Digits%20Classifier/Basics.ipynb) #NeuralNetwork
 
 # Udemy Bootcamp Projects
-1. [Predicting Bike Use with R](https://github.com/pomkos/Finished-Projects/tree/master/R/Linear%20Regression)
+1. [Predicting Bike Use with R](https://github.com/pomkos/Finished-Projects/tree/master/R/Linear%20Regression) 
 2. [Predicting Worker Class with R](https://github.com/pomkos/Finished-Projects/tree/master/R/Logistic%20Regression)
 3. [Predicting Ad Clicks with Python](https://github.com/pomkos/Finished-Projects/tree/master/Python/Logistic%20Regression)
